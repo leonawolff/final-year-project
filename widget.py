@@ -75,6 +75,7 @@ label = Label(root, text=starting_text, relief="solid", width=18, font=("arial",
 label.place(x=24, y=40)
 
 but_qui = Button(root, text="Quit", width=12, bg="red", fg="white", command=exitt).place(x=55, y=80)
+root.update()
 
 root.after(5000, loop_func(root))
 root.mainloop()
