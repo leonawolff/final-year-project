@@ -1,4 +1,4 @@
-keylog = open("mouse_data_file.txt", "r")
+mouselog = open("mouse_data_file.txt", "r")
 lastLine = ""
 clicksX = []
 clicksY = []
@@ -9,10 +9,6 @@ scrollY = []
 scrollDir = []
 startTime = ""
 endTime = ""
-
-"2022-05-04 01:43:29,820: Mouse moved to (1431, 218)"
-"2022-05-04 01:53:29,273: Mouse clicked at (-1014, 11) with Button.left"
-"2022-05-04 01:53:02,865: Mouse scrolled at (-1151, 543)(0, -1)"
 
 
 def get_x_coord(s):
@@ -42,7 +38,7 @@ def do_scroll_stuff(s):
         return -1
 
 
-for line in keylog:
+for line in mouselog:
     if lastLine is not None:
         splitLine = line.split(" Mouse ")
         if startTime is "":
